@@ -6,7 +6,7 @@ export default function WeatherSearch() {
   let [city, setCity] = useState(null);
   const [loaded, setLoaded] = useState(false);
   let [weather, setWeather] = useState({});
-  const [currentDate, setCurrentDate] = useState(getDate());
+  const displayDate = getDate();
 
   function getDate() {
     const today = new Date();
@@ -84,7 +84,7 @@ export default function WeatherSearch() {
         <div className="display-weather">
           <span>
             <h2>{weather.city}</h2>
-            <h3>{currentDate} </h3>
+            <h3>{displayDate} </h3>
             <p>Humidity: {weather.humidity}%</p>
             <p>Wind: {Math.round(weather.wind)}km/h</p>
             <p>Sky: {weather.description}</p>
