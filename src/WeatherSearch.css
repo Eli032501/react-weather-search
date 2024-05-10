@@ -1,7 +1,7 @@
 .WeatherSearch * {
   margin: 0;
 }
-.WeatherSearch {
+.WeatherSearch .box {
   background-color: #fafafac7;
   padding: 30px;
   border-radius: 10px;
@@ -76,4 +76,13 @@
   font-size: 15px;
   color: #6a61ce;
   padding-top: 6px;
+}
+.WeatherSearch .footer-text {
+  color: #fafafa;
+  padding-top: 20px;
+}
+
+.WeatherSearch .footer-text a {
+  color: #4d43c2;
+  padding-top: 20px;
 }

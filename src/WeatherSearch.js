@@ -76,36 +76,67 @@ export default function WeatherSearch() {
       <input className="input-button" type="submit" value="Search" />
     </form>
   );
+  let footer = (
+    <p className="footer-text">
+      This project was coded by{" "}
+      <a href="https://github.com/Eli032501" target="_blank" rel="noreferrer">
+        Eliana Pereira
+      </a>{" "}
+      and is on{" "}
+      <a
+        href="https://github.com/Eli032501/react-weather-search"
+        target="_blank"
+        rel="noreferrer"
+      >
+        GitHub
+      </a>
+      and hosted on{" "}
+      <a
+        href="https://weather-search-react-shecodes-hw.netlify.app/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Netlify
+      </a>
+    </p>
+  );
 
   if (loaded) {
     return (
       <div className="WeatherSearch">
-        {form}
-        <div className="display-weather">
-          <span>
-            <h2>{weather.city}</h2>
-            <h3>{displayDate} </h3>
-            <p>Humidity: {weather.humidity}%</p>
-            <p>Wind: {Math.round(weather.wind)}km/h</p>
-            <p>Sky: {weather.description}</p>
-          </span>
-          <span className="temp-display">
-            <span className="temp-value">
-              {Math.round(weather.temperature)}
-              <span>°C</span>
+        <div className="box">
+          {form}
+          <div className="display-weather">
+            <span>
+              <h2>{weather.city}</h2>
+              <h3>{displayDate} </h3>
+              <p>Humidity: {weather.humidity}%</p>
+              <p>Wind: {Math.round(weather.wind)}km/h</p>
+              <p>Sky: {weather.description}</p>
             </span>
-            <figure>
-              <img src={weather.icon} alt={weather.description} />
-            </figure>
-          </span>
+            <span className="temp-display">
+              <span className="temp-value">
+                {Math.round(weather.temperature)}
+                <span>°C</span>
+              </span>
+              <figure>
+                <img src={weather.icon} alt={weather.description} />
+              </figure>
+            </span>
+          </div>
         </div>
+        {footer}
       </div>
     );
   } else {
     return (
       <div className="WeatherSearch">
-        {form}
-        <h3> Waiting input to display weather... </h3>
+        <div className="box">
+          {form}
+          <h3> Waiting input to display weather... </h3>
+        </div>
+
+        {footer}
       </div>
     );
   }
