@@ -89,7 +89,7 @@ export default function WeatherSearch() {
         rel="noreferrer"
       >
         GitHub
-      </a>
+      </a>{" "}
       and hosted on{" "}
       <a
         href="https://weather-search-react-shecodes-hw.netlify.app/"
